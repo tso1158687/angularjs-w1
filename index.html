@@ -38,14 +38,14 @@
         <h1>Lunch Checker</h1>
         <div class="form-group">
             <!-- declare ng-model called TypeArea  -->
-            <input id="lunch-menu" type="text" placeholder="list comma separated dishes you usually have for lunch" class="form-control" ng-model="TypeArea">
+            <input ng-class="{green-border: errorColor===false,red-border:errorColor===ture}" type="text" placeholder="list comma separated dishes you usually have for lunch" class="form-control" ng-model="TypeArea">
         </div>
         <div class="form-group">
             <!-- declare a function called Caculate -->
             <button class="btn btn-default" ng-click="Caculate()">Check If Too Much</button>
         </div>
         <!-- declare id result -->
-        <div class="form-group message" id="result">
+        <div class="form-group message" ng-class="{green: errorColor===false,red:errorColor===true}">
             <!-- angularjs variable -->
             {{result}}
         </div>
